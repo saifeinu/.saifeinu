@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    body {
+      background-color: black;
+      margin-top: 0;
+      margin-right: 10%;
+      margin-left: 10%;
+    }
+
+    .container {
+      background-color: white;
+      display: flex;
+      height: 100vh;
+    }
+
+    .leftside {
+      position: relative; /* needed for absolute positioning inside */
+      width: 45%;
+    }
+
+    .background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* keeps image proportions */
+      display: block;
+    }
+
+ 
+    h1 {
+      color: white;
+      font-size: 3rem;
+    }
+
+    
+    .logo {
+      width: 80px;
+      height: auto;
+    }
+
+
+    .backgroundcontent{ 
+      position: absolute;
+      top: 20%;
+      left: -8%;
+      width: 100%; 
+      background-color:rgb(9, 9, 9,0.5);
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      gap: 15px;
+      padding: 10px 20px;
+    }
+    .rightside{
+      display: flex;
+      flex-direction: column;
+     
+      flex: 2;
+    }
+    .uppersection{
+      padding-top: 19%;
+      padding-left: 5%;
+      padding-bottom: 6%;
+      
+    }
+    .uppersection p {
+      font-size: 1.3rem;
+      margin: 0 0 1rem;
+    }
+    
+    .lowersection{
+      
+      padding-top:5%;
+      padding-left: 5%;
+    }
+    .lowersection button{
+      background-color: #556B2F;
+      border: none;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top:15px ;
+      padding-bottom: 15px;
+      border-radius: 8px;
+      color: white;
+      font-family: Sans-serif	;
+      font-weight: 500;
+      font-size: 15px;
+    
+      
+    }
+    #log{
+      color:  #556B2F;
+    }
+    .lowersection p{
+      font-size: 16px;
+    }
+    .midsection{
+      display: flex;
+      flex-direction: column;
+      background-color:rgb(243,246,251)  ;
+      width: 100%;
+      height: 33vh;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25)
+      
+    }
+    .midsection p{
+      color: black;
+      padding-left: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom:20px; 
+    }
+    .form{
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      
+      
+      align-items: start;
+      margin-left: 5%;
+      margin-bottom: 100px;
+    
+    }
+    .form label {
+      display: block;
+      font-size: 0.65rem; 
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #333;
+      margin-bottom: 2px;
+      font-family: Arial, Helvetica, sans-serif;
+     }
+
+    .form input {
+      display: block;
+      font-size: 0.75rem; /* smaller text */
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: #333; 
+      margin-bottom: 3px;
+      border: blue;
+      padding:8px 30px;
+      margin-bottom: -5px;
+    }
+
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="leftside">
+      <img src="green.avif" alt="" class="background">
+      <span class="backgroundcontent">
+        <img src="odinlogo.png" class="logo">
+        <h1>ODIN</h1>
+      </span>
+    </div>
+     
+
+    <div class="rightside">
+      <div class="uppersection">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt ex eum. Saepe ipsa minima natus, id non quis dolor architecto debitis sapiente, ad necessitatibus sequi accusamus? Illum, velit dolor!</p>
+        <br>
+        <P>You know you want to sign up</P>
+        
+      </div>
+
+      <div class="midsection">
+       <p>Let's do this!</p>
+       <div class="form">
+
+        <div>
+          <label for="fname">FIRST NAME:</label>
+          <input type="text" id="fname" name="fname" value="John"><br>
+        </div>
+
+        <div>
+          <label for="lname">LAST NAME:</label>
+          <input type="text" id="lname" name="lname" value="Smith"><br>
+        </div>
+
+        <div>
+          <label for="Ename"> EMAIL:</label>
+          <input for="text" id="Ename"><br>
+        </div>
+
+        <div>
+          <label for="number">NUMBER:</label>
+          <input type="number" id="number"><br>
+        </div>
+
+        <div>
+          <label for="password">PASSWORD:</label>
+          <input type="text" id="password"><br>
+        </div>
+
+        <div>
+        <label for="cpassword">CONFIRM PASSWORD</label>
+        <input type="text" id="cpassword"><br>
+        </div>
+
+
+       </div>
+
+      </div>
+
+
+
+      <div class="lowersection">
+        <button>
+          Create Account
+        </button>
+        <p>Already have an account? <span id="log">Log in</span></p>
+        
+
+      </div>
+
+    </div>
+
+
+  </div>
+</body>
+</html>
